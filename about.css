@@ -1,0 +1,261 @@
+:root {
+  --base-color: #867070;
+  --background-color: #2c3639;
+  --light-background-color: #e2dfdf;
+  --other-colour: #f5ebeb;
+  --additional-colour: #26a4b4;
+  --colour-1: #7b8fa1;
+  --colour-2: #e4a039;
+  --colour-3: #fad6a5;
+  --main-font-style: "Inconsolata", monospace;
+  --title-height: 60px;
+  --nav-height: 25px;
+  --small-title: 22px;
+  --general-font: 18px;
+
+  /* font-family: 'Agdasima', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Sofia', cursive; */
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  margin: auto;
+  padding: auto;
+  font-family: var(--main-font-style);
+}
+
+/* Logo and banner design */
+
+.title {
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  width: 30%;
+  padding: 5%;
+  align-items: center;
+  justify-self: center;
+}
+
+/* title writing */
+
+.title-writing {
+  display: flex;
+  flex-basis: 200px;
+}
+
+.title-writing h1 {
+  font-family: "Agdasima", sans-serif;
+  font-size: var(--general-font);
+  letter-spacing: 5px;
+  flex-basis: 120px;
+  color: var(--other-colour);
+  margin-left: 300px;
+}
+
+.vl {
+  border-left: 4px solid var(--other-colour);
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 10;
+}
+
+.side-title {
+  display: flex-box;
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  color: var(--other-colour);
+  margin-right: 50px;
+  font-size: 12px;
+}
+
+/* nav Link styling  */
+
+.top-nav {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: var(--nav-height);
+}
+
+nav a:link,
+nav a:active,
+nav a:visited {
+  color: var(--other-colour);
+  font-size: var(--nav-height);
+}
+
+nav a:hover {
+  color: var(--colour-3);
+  font-size: var(--nav-height);
+}
+
+/* About banner section */
+.main-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner {
+  grid-area: about;
+  margin: auto;
+  padding: auto;
+  width: 100;
+  position: relative;
+  display: flex;
+}
+
+#banner-img {
+  display: inline-block;
+  width: 1690px;
+  object-fit: cover;
+  margin: 0 auto;
+
+  box-shadow: 0px 0px 10px 0px #b4b4b3;
+}
+
+#about-title,
+#brief,
+#paragraph {
+  z-index: 100;
+  position: absolute;
+  top: -10px;
+}
+
+#about-title {
+  top: 100px;
+  left: 50px;
+  font-size: var(--title-height);
+}
+
+#brief {
+  top: 200px;
+  left: 50px;
+  width: 300px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#paragraph {
+  top: 270px;
+  left: 50px;
+  width: 300px;
+}
+
+/* facts about me */
+
+.facts {
+  width: 100%;
+  height: 300px;
+  box-shadow: 10px 0px 10px 0px #b4b4b3;
+}
+
+.facts h2,
+.facts p {
+  width: 600px;
+  position: relative;
+  left: 35%;
+  top: 70px;
+}
+
+/* pie chart */
+.charts {
+  position: relative;
+  height: 600px;
+}
+
+#pie-chart {
+  position: absolute;
+  width: 35%;
+  left: 500px;
+}
+
+#design {
+  position: absolute;
+  z-index: 100;
+  right: 730px;
+  top: 200px;
+  font-size: 40px;
+  font-family: pacifico;
+}
+
+.designer h3 {
+  position: absolute;
+  right: 430px;
+  top: 200px;
+  z-index: 100;
+  font-size: 30px;
+}
+
+.designer ul {
+  position: absolute;
+  right: 160px;
+  top: 260px;
+  z-index: 100;
+  font-size: var(--general-font);
+  font-weight: bold;
+}
+
+#code {
+  position: absolute;
+  z-index: 100;
+  left: 655px;
+  top: 200px;
+  font-size: 40px;
+  font-family: pacifico;
+  color: black;
+}
+
+.coder h3 {
+  position: absolute;
+  left: 120px;
+  top: 200px;
+  z-index: 100;
+  font-size: 30px;
+}
+
+.coder ul {
+  position: absolute;
+  left: 100px;
+  top: 260px;
+  font-size: var(--general-font);
+  z-index: 100;
+  font-weight: bold;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  color: var(--other-colour);
+}
+
+.footer-nav a {
+  padding-left: 30px;
+}
+
+#footer-logo {
+  height: 80%;
+  justify-self: center;
+}

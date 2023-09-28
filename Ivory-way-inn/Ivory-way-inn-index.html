@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./ivory-way-inn-style.css" />
+    <script src="./ivory-way-inn-script.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatable" content="IE-Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivory Way Inn</title>
+  </head>
+
+  <body>
+    <!-- //////////////  Banner  /////////////////-->
+    <div class="title">
+      <h1 id="title">The Ivory Way Inn</h1>
+    </div>
+
+    <div class="banner">
+      <img
+        id="banner-photo"
+        src="./ivory-way-inn-img/petr-sevcovic-fyQr1T3GE34-unsplash.jpg"
+      />
+    </div>
+
+    <div class="return">
+      <a href="./index.html"><button>Return</button></a>
+    </div>
+
+    <div class="info">
+      <h4>New Inn Road, Wiltshire, SN19 0EB</h4>
+    </div>
+
+    <!-- ////////////////   Nav /////////////// -->
+    <div class="nav">
+      <a href="./Ivory-way-inn-index.html"><button>Home</button></a>
+      <a href="./Ivory-way-inn-dinner-menu.html"><button>Menu</button></a>
+      <a href="#"><button>Online Order</button></a>
+      <a href="#"><button>Book Now</button></a>
+      <a href="#"><button>Contact Us</button></a>
+    </div>
+
+    <!-- //////// About ////////// -->
+    <div class="about">
+      <div class="slider-frame">
+        <div class="slide-images">
+          <div class="img-container">
+            <img
+              src="./ivory-way-inn-img/patrick-schneider-5xltWMpkN3E-unsplash.jpg"
+            />
+          </div>
+          <div class="img-container">
+            <img
+              src="./ivory-way-inn-img/jonathan-borba-Gkc_xM3VY34-unsplash.jpg"
+            />
+          </div>
+          <div class="img-container">
+            <img
+              src="./ivory-way-inn-img/darryl-low-lMNMJ50Kwgk-unsplash.jpg"
+            />
+          </div>
+        </div>
+      </div>
+      <h3>About</h3>
+      <p>
+        Welcome to three Michelin Star Restaurant, The Ivory Way inn, where
+        culinary excellence meets unparalleled dining experience. With our
+        dedication to exceptional flavors, exquisite presentation, and
+        impeccable service, we have been awarded the prestigious Michelin star
+        for our commitment to culinary excellence.
+      </p>
+
+      <p>
+        Our team of master chefs, led by renowned chef John Smith, meticulously
+        select the finest and freshest ingredients to create unique and
+        innovative dishes that will tantalize your taste buds. Each dish is a
+        carefully curated masterpiece, crafted with a harmonious blend of
+        textures, flavors, and aromas.
+      </p>
+
+      <p>
+        At The Ivory Way Inn, we pride ourselves on delivering an elevated
+        dining experience. Our elegant and inviting atmosphere, coupled with our
+        attentive and knowledgeable staff, ensures that every visit is one to
+        remember. Whether you are celebrating a special occasion or simply
+        seeking a remarkable dining experience, our restaurant is the perfect
+        destination.
+      </p>
+
+      <p>
+        We invite you to join us on a gastronomic journey of discovery, where
+        every bite tells a story and every dish leaves an indelible impression.
+        Come and experience the culinary marvels that have earned us the coveted
+        Michelin star and indulge in a symphony of flavors that will leave you
+        amazed.
+      </p>
+    </div>
+
+    <!-- ///////////// Menu options ///////////////// -->
+
+    <div class="menu">
+      <div class="menu-icon">
+        <img
+          class="img-btn"
+          src="./ivory-way-inn-img/alexandru-bogdan-ghita-UeYkqQh4PoI-unsplash.jpg"
+        />
+        <a href="./Ivory-way-inn-dinner-menu.html"
+          ><button class="btn btn1">Dinner Menu</button></a
+        >
+      </div>
+      <div class="menu-icon">
+        <img
+          class="img-btn"
+          src="./ivory-way-inn-img/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg"
+        />
+        <a href="./Ivory-way-inn-lunch-menu-script.html"
+          ><button class="btn btn2">Lunch Menu</button></a
+        >
+      </div>
+    </div>
+
+    <!-- //////////////// Booking ////////////// -->
+    <div class="book">
+      <form action="ivory-way-inn.php" method="post">
+        <div class="form-input">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="visitor_name"
+            placeholder="John Doe"
+            pattern="[A-Z\sa-z]{3,20}"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <label for="email">Your E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="visitor_email"
+            placeholder="john.doe@email.com"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <label for="phone">Your Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="visitor_phone"
+            placeholder="07866500539"
+            pattern="(\d{3})-?\s?)"
+            required
+          />
+        </div>
+        <hr />
+        <div class="form-input inlined">
+          <label for="adult">Adults</label>
+          <input
+            type="number"
+            id="adult"
+            name="total_adults"
+            placeholder="2"
+            min="1"
+            max="14"
+            required
+          />
+        </div>
+        <div class="form-input inlined">
+          <label for="child">Children</label>
+          <input
+            type="number"
+            id="child"
+            name="total_children"
+            placeholder="2"
+            min="0"
+            max="14"
+            required
+          />
+        </div>
+        <div class="form-input inlined">
+          <label for="booking-date">Reservation Date</label>
+          <input type="date" id="checkin-date" name="booking" required />
+        </div>
+        <hr />
+        <div class="form-input">
+          <label for="message">Anything Else?</label>
+          <textarea
+            id="message"
+            name="visitor_message"
+            placeholder="Tell us anything else that might be important."
+          ></textarea>
+        </div>
+        <button type="submit">Book</button>
+      </form>
+    </div>
+  </body>
+
+  <!-- ///////////// Footer //////////// -->
+
+  <footer>
+    <hr />
+    <button>Contact us</button>
+    <button>location</button>
+    <h4>&copy; Ivory Way Inn 2023</h4>
+  </footer>
+</html>

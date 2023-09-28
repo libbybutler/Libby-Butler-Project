@@ -1,0 +1,647 @@
+:root {
+
+    --background-color: #222831;
+    --secondary-color: #393E46;
+    --thrid-color: #B55400;
+    --fourth-color: #EEEEEE; 
+    --text-color: black;
+    --text-font: 'Courier New', Courier, monospace;
+}
+
+@media screen and (min-width:700px){
+
+body {
+    display: grid;
+    grid-template-columns: 450px 1000px 450px;
+    grid-template-rows: 150px 50px repeat(2, 650px) 550px 800px;
+    grid-template-areas:
+    "info title contact"
+    ". nav ."
+    "banner banner banner"
+    "about about about"
+    "menu menu menu"
+    ". booking ."
+    "footer footer footer"; 
+    background-color: var(--background-color);
+}
+
+/* //////////////// BANNER //////////////////////// */
+
+ .title {
+    grid-area: title;
+    text-align: center;  
+}
+
+#title  {
+    font-size: 60px;
+    letter-spacing: 5px;;   
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif ;
+    color: var(--fourth-color);
+    border: 2px solid var(--fourth-color);
+    padding: 10px
+}
+
+.banner {
+    grid-area: banner;
+    padding-top: 10px;
+  }
+  
+  #banner-photo{
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+.return{
+  grid-area: info;
+}
+
+.return button{
+  width:80px;
+  font-size: 12px;
+}
+
+.info {
+  grid-area: info;
+  width: 150px;
+  position: relative;
+  top: 50px;
+  left: 30px;
+  color: var(--fourth-color);
+}
+
+
+/* ////////////////////// Nav //////////////////// */
+
+.nav {
+  grid-area: nav;
+  max-width: 1200px ;
+  position: relative;
+  left: 30px;
+} 
+
+
+button{
+  width:175px;
+  padding:10px;
+  margin-right: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+  background: transparent;
+  color: var(--fourth-color);
+  box-shadow: 0 0 0 3px var(--fourth-color) inset;
+
+}
+
+button:hover{
+      transform: translateY(-2px);
+      background-color: var(--thrid-color);
+      
+}
+
+/* ////////// About /////////// */
+
+.about {
+  grid-area: about;
+  color: var(--fourth-color);
+  padding: 20px;
+}
+
+.about h3{
+  position: relative;
+  right: 150px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.about p{
+  width: 1500px;
+  font-family: var(--text-font);
+  font-size: 18px;
+  padding:20px;
+  text-align: center;
+  position: relative;
+  left: 30px;
+}
+
+ /* //////////////////  Slideshow //////////////////*/
+  .slider-frame{
+    grid-area: about;
+    overflow: hidden;  
+    width: 400px;
+    height:600px; 
+    border: 2px solid #B55400;
+    float: left;
+}   
+
+
+@-webkit-keyframes slide_animation{
+  0% {right:0px;}
+  10%{right:0px;}
+  20%{right: 400px;}
+  30%{right: 400px;}
+  40%{right: 400px;}
+  50%{right: 800px;}
+  60%{right: 800px;}
+  70%{right: 400px;}
+  80%{right: 400px;}
+  90%{right: 0px;}
+  100%{right:0px;}
+ 
+
+} 
+
+.slide-images{
+  width: 1200px;
+  height: 600px;
+  margin: 0px;
+  position: relative;
+  animation-name: slide_animation;
+  animation-duration: 20s;
+  animation-direction:alternate;
+  animation-play-state:running; 
+  animation-iteration-count: infinite;
+ 
+} 
+
+.img-container img {
+  position: relative;
+  grid-area: about;
+  width: 400px;
+  height: 600px;
+  float: left;
+
+}
+
+/* ///////////////// Menu  /////////////////*/
+
+.menu{
+  grid-area: menu;
+  --gap: 16px;
+  --num-cols: repeat(2, 925px);
+  --num-rows: 500px;
+
+  
+  box-sizing: border-box;
+  display:grid;
+  grid-auto-flow: column;
+  grid-template-columns: (var(--num-cols));
+  grid-template-rows: var(--num-rows);
+  gap: var(--gap);
+  position: relative;
+  width: 925px;
+  left: 10px;
+}
+
+
+.menu-icon > img {
+  position: relative;   
+  object-fit: cover;
+  width: 925px;
+  height: 100%;
+} 
+
+
+.btn {
+  z-index: 1;
+  position: relative;
+  background-color: var(--secondary-color);
+  top: -300px;
+  left: 325px;
+  padding: 20px;
+}
+
+.menu-icon button{
+  width: 250px;
+}
+ 
+
+/* //// Button Blur ///// */
+
+.menu:hover .menu-icon{
+  opacity: .5;
+  filter: blur(3px);
+
+}
+.menu .menu-icon:hover{
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1.1);
+}    
+
+
+
+
+
+/* ////////////////////// Booking /////////////// */
+
+.book{
+    grid-area: booking;
+    color: var(--fourth-color);
+    z-index: 1;
+    width: 600px;
+    text-align: center;
+    position: relative;
+    left: 150px;
+}
+
+div.form-input {
+  margin: 20px 0;
+}
+
+div.form-input.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 5px;
+}
+
+div.form-input.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 150px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+
+  /* /////////////// Footer /////////////// */
+  
+footer {
+grid-area: footer;
+z-index: 6;
+background-color: var(--secondary-color);
+} 
+
+footer button{
+  position: relative;
+  left: 700px;
+}
+
+}
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* //////////////////////// Phone View ////////////////////////// */
+
+@media screen and (min-width: 320px) and (max-width: 770px) {
+
+body {
+  display: grid;
+  grid-template-columns: 105px repeat(2, 250px);
+  grid-template-rows: 100px 40px 200px 500px 250px 500px 50px;
+  grid-template-areas:
+  "info title title"
+  "nav nav nav"
+  "banner banner banner "
+  "about about about"
+  "menu menu menu"
+  "booking booking booking"
+  "footer footer footer"; 
+  background-color: var(--background-color);
+  padding:5px;
+}
+
+/* //////////////// BANNER //////////////////////// */
+
+ .title {
+    grid-area: title;
+    text-align: center;  
+}
+
+#title  {
+    font-size: 20px;
+    letter-spacing: 5px;  
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif ;
+    color: var(--fourth-color);
+    border: 2px solid var(--fourth-color);
+    padding: 5px;
+    position: relative;
+    left: 5px;
+    width: 225px;
+    top: 10px;
+} 
+
+.banner {
+    grid-area: banner;
+    padding-top: 10px;
+  } 
+  
+#banner-photo{
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+} 
+
+.return{
+  grid-area: info;
+  width: 20px;
+} 
+
+.return button{
+  font-size: 12px;
+  width: 50px;
+} 
+
+.info {
+  grid-area: info;
+  width: 50px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  color: var(--fourth-color);
+  font-size: 10px;
+} 
+
+
+/* ////////////////////// Nav //////////////////// */
+
+.nav {
+  grid-area: nav;
+  max-width: 255px;
+  position: relative;
+  top: 5px;
+}  
+
+
+.nav button{
+  height: 40px;
+  width: 70px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 10px;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+  background: transparent;
+  color: var(--fourth-color);
+  box-shadow: 0 0 0 3px var(--fourth-color) inset;
+  text-align: center;
+
+} 
+
+button:hover{
+      transform: translateY(-2px);
+      background-color: var(--third-color);
+} 
+
+/* ////////// About /////////// */
+
+.about {
+  grid-area: about;
+  color: var(--fourth-color);
+  padding-top: 10px ;
+} 
+
+.about h3{
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+} 
+
+.about p{
+  width: 500px;
+  font-family: var(--text-font);
+  font-size: 10px;
+  padding-left:40px;
+  text-align: center;
+  position: relative;
+} 
+
+ /* //////////////////  Slideshow //////////////////*/
+.slider-frame{
+    grid-area: about;
+    overflow: hidden;  
+    width: 150px;
+    height:250px; 
+    border: 2px solid #B55400;
+    float: left;
+  
+}    
+
+
+@-webkit-keyframes slide_animation{
+  0% {right:0px;}
+  10%{right:0px;}
+  20%{right: 150px;}
+  30%{right: 150px;}
+  40%{right: 150px;}
+  50%{right: 300px;}
+  60%{right: 300px;}
+  70%{right: 150px;}
+  80%{right: 150px;}
+  90%{right: 0px;}
+  100%{right:0px;}
+
+}  
+
+
+.slide-images{
+  width: 360px;
+  height: 250px;
+  margin: 0px;
+  position: relative;
+  animation-name: slide_animation;
+  animation-duration: 20s;
+  animation-direction:alternate;
+  animation-play-state:running; 
+  animation-iteration-count: infinite;
+ 
+} 
+
+.img-container img {
+  position: relative;
+  grid-area: about;
+  width: 150px;
+  height: 250px;
+  float: left;
+
+} 
+
+
+/* ///////////////// Menu  /////////////////*/
+
+.menu{
+  grid-area: menu;
+  --gap: 16px;
+  --num-cols: repeat(2, 110px);
+  --num-rows: 200px;
+
+  
+  box-sizing: border-box;
+  display:grid;
+  grid-auto-flow: column;
+  grid-template-columns: (var(--num-cols));
+  grid-template-rows: var(--num-rows);
+  gap: var(--gap);
+  position: relative;
+  width: 250px;
+  left: 40px;
+} 
+
+
+.menu-icon > img {
+  position: relative;   
+  object-fit: cover;
+  width: 150px;
+  left: 5px;
+  height: 100%;
+} 
+
+
+.btn {
+  z-index: 1;
+  position: relative;
+  background-color: var(--secondary-color);
+  top: -120px;
+  left: 20px;
+  padding: 5px;  
+  height: 40px;
+  width: 76px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 10px;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+  background: transparent;
+  color: var(--fourth-color);
+  box-shadow: 0 0 0 3px var(--fourth-color) inset;
+  text-align: center;
+} 
+
+
+.menu-icon button{
+  width: 110px;
+  background-color: var(--secondary-color);
+}
+  
+
+
+/* ////////////////////// Booking /////////////// */
+
+.book{
+    grid-area: booking;
+    color: var(--fourth-color);
+    z-index: 1;
+    width: 210px;
+    text-align: center;
+    position: relative;
+    left: 100px;
+} 
+
+
+div.form-input {
+  margin: 10px 0;
+} 
+
+div.form-input.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+} 
+
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 5px;
+} 
+
+div.form-input.inlined input {
+  width: 95%;
+  display: inline-block;
+} 
+
+textarea {
+  height: 50px;
+} 
+
+hr {
+  border: 1px dotted #ccc;
+} 
+
+
+  /* /////////////// Footer /////////////// */
+  
+footer {
+grid-area: footer;
+z-index: 6;
+background-color: var(--secondary-color);
+font-size: 10px;
+} 
+
+
+footer button {
+  position: relative;
+  left: 10px;  
+  height: 30px;
+  width: 76px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 10px;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+  background: transparent;
+  color: var(--fourth-color);
+  box-shadow: 0 0 0 3px var(--fourth-color) inset;
+  text-align: center;
+} 
+
+footer h4 {
+  grid-area: footer;
+  position: relative;
+  left: 250px;
+  bottom: 40px;
+  color: var(--fourth-color);
+}
+
+}
+  
+

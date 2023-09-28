@@ -1,0 +1,118 @@
+:root{
+
+    --primary--background-clr: #A4907C;
+    --secondary-background-clr: #C8B6A6;
+    --primary-txt-clr: #F1DEC9;
+    --secondary-text-clr: #8D7B68;
+    --grey-background: rgb(221, 218, 218);
+    
+    --font-size-sm: 10px;
+    --font-size-s: 18px;
+    --font-size-m: 25px;
+    --font-size-l: 40px;
+    --font-size-xl: 70px;
+    
+    --gap: 30px;
+    }
+
+.banner{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: var(--grey-background);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-upload-btn{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.banner-upload-btn img{
+    width: 20px;
+}
+
+.blog{
+    width: 70vw;
+    min-width: 400px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    padding: 50px 0;
+}
+
+textarea::-webkit-scrollbar{
+    width: 10px;
+   
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.title,
+.article{
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    outline: none;
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--secondary-text-clr);
+    resize: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.title::placeholder,
+.article::placeholder{
+    color: var(--secondary-text-clr);
+}
+
+.article{
+    height: 500px;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    padding-bottom: 100px;
+    white-space: pre-wrap;
+}
+
+.blog-options{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--secondary-background-clr);
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn.grey{
+    background: var(--primary--background-clr);
+    color: var(--primary-txt-clr);
+    margin-left: 20px;
+    font-size: 14px;
+}
