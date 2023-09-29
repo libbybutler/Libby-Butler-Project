@@ -104,44 +104,50 @@ nav a:hover {
 }
 /* main banner */
 
-#design-img {
+/* #design-img {
   height: 600px;
   width: 1500px;
   object-position: 240px -7px;
-}
+} */
 
-#coding-img {
+/* #coding-img {
   height: 596px;
   width: 1500px;
   object-position: -30px;
-}
+} */
 
-#split-image {
+/* #split-image {
   position: absolute;
   clip-path: inset(0 50% 0 0);
   transition: clip-path 0.5s;
   z-index: 1;
-  margin-left: auto;
-  margin-right: auto;
-}
+} */
 
-#split-image:hover {
+/* #split-image:hover {
   clip-path: inset(0 0 0 0);
-}
+} */
 
-#split-image-2 {
+/* #split-image-2 {
   position: relative;
   clip-path: inset(0 0 0 45%);
   transition: clip-path 0.5s;
   margin-left: auto;
   margin-right: auto;
-}
-#split-image-2:hover {
+} */
+/* #split-image-2:hover {
   z-index: 2;
   clip-path: inset(0 0 0 0);
-}
+} */
 
 /* main banner text */
+
+#still-img {
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 290px;
+}
 
 #split-image a,
 #split-image-2 a {
@@ -284,7 +290,7 @@ nav a:hover {
   color: black;
 }
 
-.boxes:hover {
+/* .boxes:hover {
   opacity: 1;
 }
 
@@ -292,7 +298,7 @@ nav a:hover {
 .boxes:hover > .second-box:not(:hover),
 .boxes:hover > .third-box:not(:hover) {
   filter: blur(5px);
-}
+} */
 
 /* footer */
 
@@ -314,5 +320,5 @@ footer {
   justify-self: center;
 }
 
-@media screen and (min-width: 700px) {
-}
+/* @media screen and (min-width: 700px) {
+} */
