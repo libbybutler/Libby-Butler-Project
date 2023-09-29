@@ -118,6 +118,8 @@ nav a:hover {
   height: 596px;
   width: 1500px;
   object-position: -30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #split-image {
@@ -125,7 +127,10 @@ nav a:hover {
   clip-path: inset(0 50% 0 0);
   transition: clip-path 0.5s;
   z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 #split-image:hover {
   clip-path: inset(0 0 0 0);
 }
