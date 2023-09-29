@@ -18,10 +18,6 @@ font-family: 'Dancing Script', cursive;
 font-family: 'Sofia', cursive; */
 }
 
-body {
-  width: 100%;
-}
-
 .content {
   margin: auto;
   padding: auto;
@@ -118,8 +114,6 @@ nav a:hover {
   height: 596px;
   width: 1500px;
   object-position: -30px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #split-image {
@@ -139,6 +133,8 @@ nav a:hover {
   position: relative;
   clip-path: inset(0 0 0 45%);
   transition: clip-path 0.5s;
+  margin-left: auto;
+  margin-right: auto;
 }
 #split-image-2:hover {
   z-index: 2;
