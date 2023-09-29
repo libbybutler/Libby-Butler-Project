@@ -182,15 +182,16 @@ nav a:hover {
 }
 
 #pie-chart {
-  position: absolute;
+  position: relative;
   width: 35%;
   left: 500px;
+  top: -15px;
 }
 
 #design {
   position: absolute;
   z-index: 100;
-  right: 730px;
+  right: 850px;
   top: 200px;
   font-size: 40px;
   font-family: pacifico;
