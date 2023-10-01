@@ -4,9 +4,7 @@ $recipient = "libbybutlerproject@outlook.com"; //my email
 echo $subject = 'contact form from Libby Butler Project';
 echo $name = $_POST ["yourName"];
 echo $email = $_POST["yourEmail"];
-echo $phone = $_POST["yourPhone"];
-echo $location = $_POST["yourLocate"];
-echo  $message = $_POST["yourMessage"];
+echo $message = $_POST["yourMessage"];
 
  $mailBody="Name: $name\nEmail: $email\n\n$message"; 
 
